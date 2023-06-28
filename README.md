@@ -235,11 +235,27 @@ html, body {
     <h1 class="banner-title">Services for Institutional Investors</h1>
   </div>
 
-  <div class="content">
-    <img class="handshake" src="{{ url_for('static', filename='handshake.png') }}" alt="Businessmen Shaking Hands">
-    <div class="text">
-      <h2 class="green-title">ARDOUR GLOBAL INDEXES</h2>
-      <p>The <strong>Ardour Global Indexes</strong> strive to include pure play alternative energy companies over a specific size. These indexes are based on extensive data and rules-based methodologies.</p>
+  <div class="content-container">
+    <div class="services">
+      <h2 class="green-title">ABOUT ARDOUR CAPITAL</h2>
+      <p>Ardour Capital is a boutique investment bank in New York City. Founded in 2002, Ardour Capital Investments, LLC provides private and public companies with a full range of investment banking / corporate finance advisory services, as well as access to the capital markets through an extensive network of domestic and international institutional and family office investors.</p>
+      <p>Ardour provides institutional and family office investors with unique access to an eclectic array of growth companies that they might otherwise not be introduced to.</p>
+      <p>Our senior leadership team of four individuals brings a combined one hundred plus years of capital markets and corporate finance experience.</p>
+      <p>In addition to our groundbreaking and market-leading expertise in the field of Energy Technology / Alternative Energy & Power / Clean & Renewable Technologies, Ardour is active in sectors such as IoT, SaaS Software, and Healthcare.</p>
+    </div>
+    <div class="financialservicesimage">
+      <img src="{{ url_for('static', filename='handshake.png') }}" alt="Businessmen Shaking Hands">
+    </div>
+  </div>
+
+  <div class="icons-section">
+    <div class="icon-wrapper">
+      <img class="icon-image" src="{{ url_for('static', filename='money-icon.png') }}" alt="Money Icon">
+      <span class="circle-text">Finance</span>
+    </div>
+    <div class="icon-wrapper">
+      <img class="icon-image" src="{{ url_for('static', filename='bank-icon.jpeg') }}" alt="Bank Icon">
+      <span class="circle-text">Banking</span>
     </div>
   </div>
 {% endblock %}
@@ -252,60 +268,117 @@ body {
 
 .banner {
   position: relative;
-  text-align: center;
-  background-color: #fff;
-  border-radius: 5px;
-  margin: 0 auto; 
-  padding: 0; 
+  width: 100%;
+  height: 300px;
   overflow: hidden;
-  width: 80%; 
 }
 
 .homeimage {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
   object-fit: cover;
 }
-
-
 
 .banner-title {
   position: absolute;
   color: #2f2f2f;
   font-family: Georgia, serif;
-  font-size: 1.0em;
+  font-size: 1.5em;
   font-weight: bold;
   text-shadow: 6px 6px 6px black;
+  bottom: 20px;
+  left: 20px;
+  background: linear-gradient(to right, rgba(255,255,255,0.8), rgba(255,255,255,0));
+  padding: 10px;
+  border: 1px solid #000;
 }
 
-.content {
-  width: 80%;
-  margin: 40px auto;
+.content-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.services {
+  flex-basis: 65%;
+  margin-right: 200px;
+  padding-right: 40px;
+}
+
+.services h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.services p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+.services ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.services li {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.financialservicesimage {
+  flex-basis: 35%;
+  display: flex;
+  justify-content: flex-end; /* Adjusted to align the image to the right */
   align-items: center;
 }
 
-.handshake {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px;
+.financialservicesimage img {
+  max-width: 150%;
+  max-height: 150%;
 }
 
 .green-title {
-  color: limegreen;
-  font-family: Georgia, serif;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-align: center;
+  color: #008000;
 }
 
-.text {
-  font-family: Georgia, serif;
-  color: #2f2f2f;
-  text-align: justify;
+.icons-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.icon-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #102093;
+  margin-bottom: 20px;
+}
+
+.circle-text {
+  color: #102093;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
 }
 ```
 ---------------------
