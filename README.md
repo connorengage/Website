@@ -37,7 +37,7 @@
 ```
 -------
 ### Banner used in all pages
-###base.html
+### base.html
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -92,7 +92,7 @@
 </html>
 ```
 ------------------------
-###base.css:
+### base.css:
 ```
 /* Add this at the beginning of base.css */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
@@ -218,8 +218,8 @@ html, body {
 ```
 --------------------
 
-##Home page (landing page)
-###home.html
+## Home page (landing page)
+### home.html
 ```
 {% extends "base.html" %}
 
@@ -244,7 +244,7 @@ html, body {
   </div>
 {% endblock %}
 ```
-###home.css:
+### home.css:
 ```
 body {
   background-color: #f0f4f8;
@@ -309,8 +309,8 @@ body {
 }
 ```
 ---------------------
-##Capital markets page
-###capitalmarkets.html:
+## Capital markets page
+### capitalmarkets.html:
 ```
 {% extends "base.html" %}
 
@@ -340,7 +340,7 @@ body {
 
 {% endblock %}
 ```
-###capitalmarkets.css
+### capitalmarkets.css
 ```
 /* Banner */
 .banner {
@@ -426,8 +426,8 @@ body {
 
 ```
 --------------------------
-##Banking page
-###banking.html:
+## Banking page
+### banking.html:
 ```
 {% extends "base.html" %}
 
@@ -511,7 +511,7 @@ body {
   </div>
 {% endblock %}
 ```
-###banking.css:
+### banking.css:
 ```
 body {
   background-color: #f0f4f8;
@@ -629,8 +629,8 @@ lip {
 }
 ```
 -------------------------
-##Team page
-###team.html:
+## Team page
+### team.html:
 ```
 {% extends "base.html" %}
 
@@ -678,8 +678,8 @@ lip {
 
 ```
 ----------------------
-##Contact
-###contact.html:
+## Contact
+### contact.html:
 ```
 {% extends "base.html" %}
 
